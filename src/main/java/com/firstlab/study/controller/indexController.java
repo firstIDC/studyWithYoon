@@ -16,6 +16,8 @@ public class indexController {
             isTrue = true;
         }
 
+        //seolgiya hi
+
         Integer money = 1000;
 
         if (isTrue) {
