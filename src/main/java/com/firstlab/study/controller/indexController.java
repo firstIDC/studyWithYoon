@@ -2,33 +2,27 @@ package com.firstlab.study.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class indexController {
 
-    @GetMapping("/{boolean}")
-    public String index(@PathVariable("boolean") String paramTrue, Model model) {
+    @PostMapping("/interviewsheet/upload")
+    public String interviewsheetUpload(
+            @RequestParam(value = "msg") String msg,
+            @RequestParam(value = "msg2") String msg2,
+            @RequestParam(value = "msg3") String msg3,
+            Model model) {
 
-        Boolean isTrue = false;
-        if (paramTrue.equals("true")) {
-            isTrue = true;
-        }
+        msg = "111";
+        msg2 = "222";
+        msg3 = "333";
 
-        //seolgiya hi
 
-        Integer money = 1000;
-
-        if (isTrue) {
-            money = money + 500;
-        } else {
-            money = money + 300;
-        }
-
-        System.out.println(money);
-
-        model.addAttribute("value", 1500);
+        model.addAttribute("msg", msg);
+        model.addAttribute("msg2", msg2);
+        model.addAttribute("msg3", msg3);
 
         return "index";
     }
