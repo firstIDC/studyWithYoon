@@ -2,53 +2,23 @@ package com.firstlab.study.dto;
 
 public class QuestionForm {
 
-    String age;
+    String msg;
 
-    String howPeng;
+    String msg2;
 
-    String howGoni;
-
-    String spear;
-
-    String end;
-
-    public String getAge() {
-        return age;
+    public String getmsg() {
+        return msg;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setmsg(String msg) {
+        this.msg = msg;
     }
 
-    public String getHowPeng() {
-        return howPeng;
+    public String getmsg2() {
+        return msg2;
     }
 
-    public void setHowPeng(String howPeng) {
-        this.howPeng = howPeng;
-    }
-
-    public String getHowGoni() {
-        return howGoni;
-    }
-
-    public void setHowGoni(String howGoni) {
-        this.howGoni = howGoni;
-    }
-
-    public String getSpear() {
-        return spear;
-    }
-
-    public void setSpear(String spear) {
-        this.spear = spear;
-    }
-
-    public String getEnd() {
-        return end;
-    }
-
-    public void setEnd(String end) {
-        this.end = end;
+    public void setmsg2(String msg2) {
+        this.msg2 = msg2;
     }
 }

@@ -1,5 +1,6 @@
 package com.firstlab.study.controller;
 
+import com.firstlab.study.dto.Jangform;
 import com.firstlab.study.dto.QuestionForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,29 +12,17 @@ public class IndexController {
 
     @PostMapping("/interviewsheet/upload")
     public String interviewsheetUpload(
-            QuestionForm questionForm,
+            Jangform jangForm,
             Model model) {
 
-        System.out.println(questionForm);
+        System.out.println(jangForm);
 
-        questionForm.setAge("서른 마흔 다섯살이다");
-        questionForm.setHowPeng("예술적으로 가셨구만");
-        questionForm.setHowGoni("내가 아는 타짜 중에 최고였어요");
-        questionForm.setSpear("남조선 아새끼들 눈치가 얼마나 빠른데");
-        questionForm.setEnd("오잉");
+        jangForm.setBibigo("코딱지");
+        jangForm.setBibigo2("꺼져");
 
+        model.addAttribute("msg",jangForm.getBibigo());
+        model.addAttribute("msg2",jangForm.getBibigo2());
 
-//        msg = "서른 마흔 다섯살이다";
-//        msg2 = "예술적으로 가셨구만";
-//        msg3 = "내가 아는 타짜 중에 최고였어요";
-//        msg4 = "남조선 아새끼들 눈치가 얼마나 빠른데";
-//        msg5 = "오잉";
-//
-        model.addAttribute("msg",questionForm.getAge());
-        model.addAttribute("msg2",questionForm.getHowPeng());
-        model.addAttribute("msg3",questionForm.getHowGoni());
-        model.addAttribute("msg4",questionForm.getSpear());
-        model.addAttribute("msg5",questionForm.getEnd());
 
         return "index";
 }

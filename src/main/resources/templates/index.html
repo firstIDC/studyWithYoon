@@ -12,28 +12,13 @@
 <form th:action="@{/interviewsheet/upload}"method="post">
     <text>나이가 어떻게 되세요?</text>
     <br>
-    <input type="text" class="form-control" name="age" th:value="${msg}"
+    <input type="text" class="form-control" name="Bibigo" th:value="${msg}"
 placeholder="두자리 숫자">
     <br>
     <text>팽경장은 건강하시고?</text>
     <br>
-    <input type="text" class="form-control" name="howPeng" th:value="${msg2}"
+    <input type="text" class="form-control" name="Bibigo2" th:value="${msg2}"
            placeholder="건강할까요?">
-    <br>
-    <text>고니요?</text>
-    <br>
-    <input type="text" class="form-control" name="howGoni" th:value="${msg3}"
-           placeholder="새?">
-    <br>
-    <text>소풍왔니?</text>
-    <br>
-    <input type="text" class="form-control" name="spear" th:value="${msg4}"
-           placeholder="두리번 거리지 좀 말라">
-    <br>
-    <text> 이제 그만</text>
-    <br>
-    <input type="text" class="form-control" name="end" th:value="${msg5}"
-           placeholder="뭘?">
     <input type="submit">
 </form>
 
