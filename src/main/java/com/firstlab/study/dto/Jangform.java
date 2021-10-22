@@ -1,6 +1,6 @@
 package com.firstlab.study.dto;
 
-public class Jangform {
+public class JangForm {
     String bibigo;
     String bibigo2;
 
